@@ -6,11 +6,11 @@ function requestController(req, res) {
   res.end('Bienvenidos al curso\n');
 }
 
-console.log('Bienvenidos al curso');
+setInterval(() => {
+  console.log('Bienvenidos al curso');
+}, 2000); 
 
 const server = http.createServer(requestController);
-
-// Usar el puerto proporcionado por Render o el valor de .env
 const PORT = process.env.PORT || 4000;
 
 server.listen(PORT, function() {
